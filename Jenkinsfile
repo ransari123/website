@@ -1,3 +1,4 @@
+CODE_CHANGES = 'None'
 pipeline {
   agent any
     stages {
@@ -7,6 +8,10 @@ pipeline {
         }
       }
       stage("test") {
+        when {
+          expression {
+              BRANCH_NAME == 'master' && CODE_CHANGES == 'None'
+          }
         steps {
           echo "Testing the application"
         }
@@ -17,6 +22,16 @@ pipeline {
         }
       }
    }
+  post {
+    always {
+        echo "Send an email"
+    }
+    success {
+       echo "Build successful"
+    }
+    failure {
+       echo "Build failure"
+    }
 }
          
            
