@@ -1,6 +1,6 @@
 #!/bin/sh
-mkdir -p /home/ubuntu/testing/
-touch /home/ubuntu/testing/testing_file
-echo "Write something into the file" >> /home/ubuntu/testing/testing_file
+mkdir -p /var/lib/jenkins/abc
+touch /var/lib/jenkins/abc/testing_file
+echo "Write something into the file" >> /var/lib/jenkins/abc/testing_file
 
 
