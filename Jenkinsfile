@@ -25,15 +25,16 @@ pipeline {
       }
    }
   post {
-    always {
-        echo "Send an email"
-    }
-    success {
-       echo "Build successful"
-    }
-    failure {
-       echo "Build failure"
-    }
+     always {
+         echo "Send an email"
+     }
+     success {
+         echo "Build successful"
+     }
+     failure {
+        echo "Build failure"
+     }
+  }
 }
          
            
