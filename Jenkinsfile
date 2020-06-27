@@ -5,6 +5,7 @@ pipeline {
       stage("build") {
         steps {
            echo "Building the application"
+           sh /var/lib/jenkins/workspace/my-app_master/build.sh
         }
       }
       stage("test") {
